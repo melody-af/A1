@@ -1,8 +1,18 @@
 /**
- * TODO
+ * Welcome to Exercises.js!
+ * 
+ * This file is imported in App.js and the functions below (ex1, ex2, ex3) are
+ * ran whenever the app is reloaded. You can view the output of these functions
+ * in the terminal.
+ * 
+ * To complete this part of the assignment, fill in code for ex1, ex2, and
+ * makeCircle. 
+ * 
+ * Once you're done, you can set RUN_EXERCISES to false so the output from these
+ * exercises don't keep spamming your terminal.
  */
 
-export const RUN_EXERCISES = true;
+const RUN_EXERCISES = true;
 
 const ONE_TO_A_HUNDRED = Array(100).fill(1).map((n, i) => n + i);
 
@@ -46,12 +56,16 @@ const ex3 = () => {
 }
 
 // Don't modify this code!
-export const run = () => {
-    console.log("\x1b[32m", 'Output for Exercise 1 (FizzBuzz):');
-    ex1();
-    console.log("\x1b[32m", 'Output for Exercise 2 (Squares):');
-    ex2();
-    console.log("\x1b[32m", 'Output for Exercise 3 (Circle):');
-    ex3();
-    console.log("\x1b[32m", 'End of output for the JS exercises. To disable this, set RUN_EXERCISES to false in Exercises.js.');
+export default runExercises = () => {
+    if (RUN_EXERCISES) {
+        console.log("\x1b[32m", 'Output for Exercise 1 (FizzBuzz):');
+        ex1();
+        console.log("\x1b[32m", 'Output for Exercise 2 (Squares):');
+        ex2();
+        console.log("\x1b[32m", 'Output for Exercise 3 (Circle):');
+        ex3();
+        console.log("\x1b[32m", 'End of output for the JS exercises. To disable this, set RUN_EXERCISES to false in Exercises.js.');
+    } else {
+        console.log("\x1b[31m", "Exercises skipped. Please make sure you've completed the exercises in Exercises.js before submitting.");
+    }
 }

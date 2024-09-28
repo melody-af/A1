@@ -4,16 +4,14 @@
 import { View, Text, Image, StyleSheet, SafeAreaView} from 'react-native';
 import { useEffect } from 'react';
 
-import { RUN_EXERCISES, run } from './Exercises';
+import runExercises from './Exercises';
 
 // EXPORTING something we build!
 // Remember, UI Components are functions under the hood and they return JSX (UI). This App component returns a "SafeAreaView" with more components nested underneath.
 export default function App() {
   // START - don't modify the below code
   useEffect(() => {
-    if (RUN_EXERCISES) {
-      run();
-    }
+    runExercises();
   }, []);
   // END - don't modify the above code
 
