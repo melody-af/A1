@@ -2,24 +2,37 @@
 // View, Text, Image, and StyleSheet are core building blocks for React Native apps.
 // SafeAreaView is used to ensure the app positions content appropriately around notches and other OS interface elements.
 import { View, Text, Image, StyleSheet, SafeAreaView} from 'react-native';
+import { useEffect } from 'react';
+
+import { RUN_EXERCISES, run } from './Exercises';
 
 // EXPORTING something we build!
 // Remember, UI Components are functions under the hood and they return JSX (UI). This App component returns a "SafeAreaView" with more components nested underneath.
 export default function App() {
-  // Feel free to edit anything inside here!
+  // START - don't modify the below code
+  useEffect(() => {
+    if (RUN_EXERCISES) {
+      run();
+    }
+  }, []);
+  // END - don't modify the above code
+
+  // Feel free to edit anything starting here! --------------------------------------------
 
   const welcomeMessage = "Welcome to CS 147L!"
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>{welcomeMessage}</Text>
       <Text style={styles.paragraph}>
         Change code in the editor and watch it change on your phone.
       </Text>
+      <View style={styles.imageContainer}>
         <Image style={styles.logo} source={require('./assets/snack-icon.png')} />
         <Image style={styles.logo} source={require('./assets/snack-icon.png')} />
         <Image style={styles.logo} source={require('./assets/snack-icon.png')} />
-    </View>
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -33,6 +46,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center', // Try: 'flex-start' or 'flex-end' or 'space-between' or 'space-around' or 'space evenly'
     backgroundColor: '#ecf0f1', // Try different color hex codes!
     padding: 8, // Try changing this value!
+  },
+  imageContainer: {
+    flexDirection: 'row',
   },
   title: {
     fontSize: 24, // Try changing this value!
