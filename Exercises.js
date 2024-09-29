@@ -22,10 +22,14 @@ const ONE_TO_A_HUNDRED = Array(100).fill(1).map((n, i) => n + i);
  * For numbers which are both multiples of three and five, print "FizzBuzz". 
  * 
  * An array of numbers is provided for you as a variable called ONE_TO_A_HUNDRED.
+ * 
+ * The result should print something like this to the console, with each number
+ * or string on its own line (ignore the commas): 
+ *   1, 2, Fizz, 4, Buzz, ..., 14, FizzBuzz, 16, ..., 100
  */
 const ex1 = () => {
     // TODO: Fill this in!
-}
+};
 
 /**
  * Print an array containing the squares for all the even numbers between 
@@ -38,22 +42,34 @@ const ex1 = () => {
  */
 const ex2 = () => {
     // TODO: Fill this in!
-}
-
-// TODO: Replace this!
-const makeCircle = () => {}; // empty function
+};
 
 /**
  * Write a function called makeCircle that, given the radius of a circle, returns
  * an object containing two properties: 
  *  - "radius", which contains the given radius
+ *  - "diameter", which contains the diameter of the circle (2 * radius)
+ *  - "circumference", which contains the circumference of the circle (2 * pi * radius)
  *  - "area", which contains the area of the circle (pi * radius ^ 2)
+ * 
+ *  If the radius is negative, return an object with all the same properties but with
+ *  a null value for each property.
+ * 
+ * Example: 
+ * - Input: 10
+ * - Output: {"radius": 10, "diameter": 20, "circumference": 62.83185307179586, "area": 314.1592653589793}
  */
-const ex3 = () => {
-    console.log(makeCircle(1));
-    console.log(makeCircle(50));
-    console.log(makeCircle(-10));
-}
+
+const PI = Math.PI;
+const ex3 = (radius) => {
+    // TODO: Fill this in!
+};
+
+const ex3Test = () => {
+    console.log(ex3(1));
+    console.log(ex3(50));
+    console.log(ex3(-10));
+};
 
 // Don't modify this code!
 export default runExercises = () => {
@@ -63,9 +79,9 @@ export default runExercises = () => {
         console.log("\x1b[32m", 'Output for Exercise 2 (Squares):');
         ex2();
         console.log("\x1b[32m", 'Output for Exercise 3 (Circle):');
-        ex3();
+        ex3Test();
         console.log("\x1b[32m", 'End of output for the JS exercises. To disable this, set RUN_EXERCISES to false in Exercises.js.');
     } else {
         console.log("\x1b[31m", "Exercises skipped. Please make sure you've completed the exercises in Exercises.js before submitting.");
     }
-}
+};
