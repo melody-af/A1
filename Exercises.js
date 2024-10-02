@@ -25,7 +25,7 @@ const ONE_TO_A_HUNDRED = Array(100).fill(1).map((n, i) => n + i);
  * 
  * The result should print something like this to the console, with each number
  * or string on its own line (ignore the commas): 
- *   1, 2, Fizz, 4, Buzz, ..., 14, FizzBuzz, 16, ..., 100
+ *   1, 2, Fizz, 4, Buzz, ..., 14, FizzBuzz, 16, ..., 98, Fizz, Buzz
  */
 const ex1 = () => {
     // TODO: Fill this in!
